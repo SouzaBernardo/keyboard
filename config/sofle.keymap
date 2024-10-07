@@ -97,7 +97,7 @@
 &trans          &kp INS       &kp PSCRN         &kp K_CMENU   &trans        &trans                             &kp PG_UP   &kp LC(LEFT_BRACKET)  &kp UP      &kp LC(RIGHT_BRACKET)  &kp LEFT_BRACE  &kp RIGHT_BRACE
 &trans          &kp LALT      &kp LCTRL         &kp LSHFT     &trans        &kp CLCK                           &kp PG_DN   &kp LEFT              &kp DOWN    &kp RIGHT              &kp LBKT        &kp RBKT
 &kp LEFT_SHIFT  &kp K_UNDO    &kp K_CUT         &kp K_COPY    &kp K_PASTE   &trans        &trans       &trans  &trans      &trans                &trans      &trans                 &kp DELETE      &kp BACKSPACE
-                              &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &refactor     &kp LC(B)    &trans  &trans      &trans                &trans      &trans
+                              &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &refactor     &kp RG(B)    &trans  &trans      &trans                &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;

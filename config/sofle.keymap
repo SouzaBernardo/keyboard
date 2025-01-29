@@ -75,6 +75,36 @@
             tapping-term-ms = <1>;
             hold-trigger-key-positions = <44>;
         };
+
+        kp_and_refactor: kp_and_refactor {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_AND_REFACTOR";
+            bindings = <&refactor>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <16>;
+            tapping-term-ms = <1>;
+        };
+
+        behavior_find: behavior_find {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BEHAVIOR_FIND";
+            bindings = <&find>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <28>;
+            tapping-term-ms = <1>;
+        };
+
+        create_function: create_function {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CREATE_FUNCTION";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <45>;
+            tapping-term-ms = <1>;
+        };
     };
 
     keymap {
@@ -91,11 +121,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp NON_US_BACKSLASH  &kp N1  &kp N2        &kp N3    &kp N4     &kp N5                                    &kp N6                          &kp N7     &kp N8     &kp N9             &kp N0    &kp BACKSPACE
-&kp TAB               &kp Q   &kp W         &kp E     &kp R      &kp T                                     &kp Y                           &kp U      &kp I      &kp O              &kp P     &kp BACKSLASH
-&kp ESC               &kp A   &kp S         &kp D     &kp F      &kp G                                     &kp H                           &kp J      &kp K      &kp L              &kp SEMI  &kp SQT
-&kp LSHFT             &kp Z   &kp X         &kp C     &kp V      &kp B             &kp C_MUTE    &kp C_PP  &behavior_tap_hold_key RG(N) N  &kp M      &kp COMMA  &kp DOT            &kp FSLH  &kp ENTER
-                              &kp LEFT_ALT  &kp LGUI  &kp LCTRL  &tap_or_hold 2 1  &kp SPACE     &mo 3     &kp MINUS                       &kp EQUAL  &kp LBKT   &kp RIGHT_BRACKET
+&kp NON_US_BACKSLASH  &kp N1  &kp N2        &kp N3                              &kp N4                              &kp N5                                    &kp N6                          &kp N7                        &kp N8     &kp N9             &kp N0    &kp BACKSPACE
+&kp TAB               &kp Q   &kp W         &kp E                               &kp_and_refactor 0 R                &kp T                                     &kp Y                           &kp U                         &kp I      &kp O              &kp P     &kp BACKSLASH
+&kp ESC               &kp A   &kp S         &kp D                               &behavior_find 0 F                  &kp G                                     &kp H                           &kp J                         &kp K      &kp L              &kp SEMI  &kp SQT
+&kp LSHFT             &kp Z   &kp X         &behavior_tap_hold_key RG(LA(C)) C  &behavior_tap_hold_key RG(LA(V)) V  &kp B             &kp C_MUTE    &kp C_PP  &behavior_tap_hold_key RG(N) N  &create_function RG(LA(M)) M  &kp COMMA  &kp DOT            &kp FSLH  &kp ENTER
+                              &kp LEFT_ALT  &kp LGUI                            &kp LCTRL                           &tap_or_hold 2 1  &kp SPACE     &mo 3     &kp MINUS                       &kp EQUAL                     &kp LBKT   &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;

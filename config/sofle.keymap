@@ -63,7 +63,7 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <53>;
-            tapping-term-ms = <1>;
+            tapping-term-ms = <10>;
         };
 
         behavior_tap_hold_key: behavior_tap_hold_key {
@@ -72,8 +72,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <1>;
-            hold-trigger-key-positions = <44>;
+            tapping-term-ms = <10>;
         };
 
         kp_and_refactor: kp_and_refactor {
@@ -83,7 +82,7 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <16>;
-            tapping-term-ms = <1>;
+            tapping-term-ms = <2>;
         };
 
         behavior_find: behavior_find {
@@ -93,7 +92,7 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <28>;
-            tapping-term-ms = <1>;
+            tapping-term-ms = <10>;
         };
 
         create_function: create_function {
@@ -103,7 +102,7 @@
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <45>;
-            tapping-term-ms = <1>;
+            tapping-term-ms = <9>;
         };
     };
 
